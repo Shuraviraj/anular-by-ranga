@@ -1,0 +1,21 @@
+<table border="1">
+    <caption>
+        List of My Todos
+    </caption>
+    <thead>
+        <tr>
+            <th>Serial No.</th>
+            <th>Description</th>
+            <th>Target Date</th>
+            <th>Done</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let todo of todos">
+        <tr>
+            <td>{{ todo.id }}</td>
+            <td>{{ todo.description }}</td>
+            <td> {{ todo.targetDate | date: 'longDate' | uppercase }} </td>
+            <td>{{ todo.done }}</td>
+        </tr>
+    </tbody>
+</table>
