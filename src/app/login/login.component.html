@@ -1,7 +1,11 @@
-<!-- Username : <input type="text" name="username" placeholder={{usernamePlaceholder}}> -->
-<small *ngIf="isError">{{errorMessage}}</small>
-<div>
-    Username : <input type="text" name="username" [(ngModel)]="usernamePlaceholder">
-    Password : <input type="password" name="password" [(ngModel)]="passwordPlaceholder">
-    <button (click)=handleLogin()>Login</button>
+<h1>Login !</h1>
+<div class="container">
+  <div class="alert alert-warning" *ngIf="isError">{{ errorMessage }}</div>
+  <div>
+    Username :
+    <input type="text" name="username" [(ngModel)]="usernamePlaceholder" />
+    Password :
+    <input type="password" name="password" [(ngModel)]="passwordPlaceholder" />
+    <button (click)="handleLogin()" class="btn btn-success mx-3">Login</button>
+  </div>
 </div>
