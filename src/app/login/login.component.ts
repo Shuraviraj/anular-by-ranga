@@ -33,4 +33,9 @@ export class LoginComponent implements OnInit {
       this.isError = true;
     }
   }
-}
+
+  private isSessionStored(key : string, value : string) : boolean {
+    console.log("sessionStorage is already set " + key);
+    return sessionStorage.getItem(key) == value;
+  }
+ }

@@ -11,9 +11,17 @@ export class HardcodedAuthenticationService {
       return true;
     }
     if (username === 'ravi' && password === 'shubhashini') {
-      sessionStorage.setItem('authenticaterUser', username);
+      sessionStorage.setItem('authenticatedUser', username);
       return true;
     }
     return false;
+  }
+
+  isUserLoggedIn() : boolean {
+    return sessionStorage.getItem("authenticatedUser") != null;
+  }
+
+  logout() : void {
+    sessionStorage.removeItem("authenticatedUser");
   }
 }
